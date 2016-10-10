@@ -1,10 +1,10 @@
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import * as React from "react";
+import * as ReactDOM from "react-dom";
 
-interface text {
+interface Text {
     content: string;
 }
-class  TestElement extends React.Component<text,{}> {
+class  TestElement extends React.Component<Text, {}> {
     render() {
         return  (
             <div className="test">
@@ -14,4 +14,4 @@ class  TestElement extends React.Component<text,{}> {
     }
 }
 
-ReactDOM.render(<TestElement content="test"/>,document.getElementById('app'));
+ReactDOM.render(<TestElement content="test"/>, document.getElementById("app"));
