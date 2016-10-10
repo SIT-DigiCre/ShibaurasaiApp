@@ -1,7 +1,7 @@
 "use strict";
 
 module.exports = {
-  entry: './src/main.js',
+  entry: './src/main.tsx',
   output: {
     filename: 'main.js'
   },
@@ -10,9 +10,9 @@ module.exports = {
   },
   module: {
     loaders: [{
-      test:     /\.js$/,
+      test:     /\.tsx?$/,
       exclude:  /node_modules/,
-      loader:  'babel-loader'
+      loader:  'ts-loader'
     }]
   }
 };
