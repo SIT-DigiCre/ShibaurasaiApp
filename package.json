@@ -1,0 +1,11 @@
+{
+  "name": "shibaurasai-app",
+  "version": "0.1.0",
+  "description": "shibaurasai navigation aplication",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "sh4869 <nobuk4869@gmail.com>",
+  "license": "MIT"
+}
