@@ -9,10 +9,19 @@ module.exports = {
     root: __dirname + 'src/js'
   },
   module: {
-    loaders: [{
-      test:     /\.tsx?$/,
-      exclude:  /node_modules/,
-      loader:  'ts-loader'
-    }]
+    loaders: [
+      {
+        test:     /\.tsx?$/,
+        exclude:  /node_modules/,
+        loader:  'ts-loader'
+      },
+      {
+        test: /\.css$/,
+        loader: [
+          'style-loader',
+          'css-loader'
+        ]
+      }
+    ]
   }
 };
