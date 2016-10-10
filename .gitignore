@@ -48,3 +48,7 @@ jspm_packages
 ### Cordova ###
 platforms/
 plugins/
+
+### ビルド時生成ファイルはコミットしない方針で
+
+www/js/
