@@ -3,7 +3,7 @@
 module.exports = {
   entry: './src/main.tsx',
   output: {
-    filename: 'main.js'
+    filename: 'www/js/main.js'
   },
   resolve: {
     root: __dirname + 'src/js'
