@@ -6,7 +6,8 @@ module.exports = {
     filename: 'www/js/main.js'
   },
   resolve: {
-    root: __dirname + 'src/js'
+    root: __dirname + 'src/',
+    extensions: ["",".ts",".tsx",".js"]
   },
   module: {
     loaders: [
