@@ -2,7 +2,8 @@
  * Side Menu Bar 
  */
 interface MenuItemObject {
-    name: string;
+    key: string;
+    displayName: string;
     onTouch: () => void;
     style: Object;
 }
