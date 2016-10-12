@@ -7,7 +7,7 @@ import MenuItemObject from "./MenuItem";
 import AppBar from "material-ui/AppBar";
 import spacing from "material-ui/styles/spacing";
 interface DrawerMenuProps {
-
+    appBarTitle: string;
 }
 
 interface DrawerMenuState {
@@ -79,7 +79,7 @@ export default class DrawerMenu extends React.Component<DrawerMenuProps, DrawerM
         return (
             <div>
                 <AppBar
-                    title="Title"
+                    title={this.props.appBarTitle}
                     onLeftIconButtonTouchTap={this.handleToggle}
                     style={this.appbar_style}
                 />

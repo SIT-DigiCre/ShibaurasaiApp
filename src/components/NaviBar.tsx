@@ -1,11 +1,12 @@
 import * as React from "react";
+import "material-ui";
 import getMuiTheme from "material-ui/styles/getMuiTheme";
 import lightBaseTheme from "material-ui/styles/baseThemes/lightBaseTheme";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import DrawerMenu from "./DrawerMenu";
 
 interface NaviBarProps {
-    name: string;
+    appName: string;
 }
 
 interface NaviBarState {
@@ -25,7 +26,7 @@ export default class NaviBar extends React.Component<NaviBarProps, NaviBarState>
     render() {
         return (
             <MuiThemeProvider muiTheme={getMuiTheme(lightBaseTheme)}>
-                    <DrawerMenu/>
+                    <DrawerMenu appBarTitle={this.props.appName}/>
             </MuiThemeProvider>
         );
     }
