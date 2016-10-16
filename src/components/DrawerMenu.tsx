@@ -6,6 +6,8 @@ import FontIcon from "material-ui/FontIcon";
 import MenuItemObject from "./MenuItem";
 import AppBar from "material-ui/AppBar";
 import spacing from "material-ui/styles/spacing";
+import { Link } from "react-router";
+
 interface DrawerMenuProps {
     appBarTitle: string;
 }
@@ -38,26 +40,30 @@ export default class DrawerMenu extends React.Component<DrawerMenuProps, DrawerM
             },
             style: {
                 backgroundColor: "#B2FF59"
-            }
+            },
+            to: ""
         },
         {
             key: "title",
             displayName: "title",
             onTouch: () => {
+                this.handleToggle();
                 console.log("test");
             },
             style: {
 
-            }
+            },
+            to: "/test"
         },
         {
             key: "title2",
             displayName: "title2",
             onTouch: () => {
-
+                this.handleToggle();
             },
             style: {
-            }
+            },
+            to: ""
         }
     ];
 
@@ -73,7 +79,11 @@ export default class DrawerMenu extends React.Component<DrawerMenuProps, DrawerM
     render() {
         const menus = this.menu_items.map((item) => {
             return (
-                <MenuItem key={item.key} onTouchTap={item.onTouch} style={item.style}>{item.displayName}</MenuItem>
+                <Link to={item.to}>
+                    <MenuItem key={item.key} onTouchTap={item.onTouch} style={item.style}>
+                        {item.displayName}
+                    </MenuItem>
+                </Link>
             );
         });
         return (
@@ -82,7 +92,7 @@ export default class DrawerMenu extends React.Component<DrawerMenuProps, DrawerM
                     title={this.props.appBarTitle}
                     onLeftIconButtonTouchTap={this.handleToggle}
                     style={this.appbar_style}
-                />
+                    />
                 <Drawer open={this.state.open}
                     width={spacing.desktopKeylineIncrement * 5}>
                     {menus}
