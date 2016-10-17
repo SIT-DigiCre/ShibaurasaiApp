@@ -6,7 +6,7 @@ interface MenuItemObject {
     displayName: string;
     onTouch: () => void;
     style: Object;
-    to: string;
+    to: string | null;
 }
 
 export default MenuItemObject;

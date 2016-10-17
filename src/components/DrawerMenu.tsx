@@ -31,17 +31,23 @@ export default class DrawerMenu extends React.Component<DrawerMenuProps, DrawerM
         backgroundColor: "#00C853"
     };
 
+    private link_style = {
+        textDecoration: "none",
+        fontWeight: 400
+    };
+
     private menu_items: MenuItemObject[] = [
         {
             key: "back",
-            displayName: "戻る",
+            displayName: "Back",
             onTouch: () => {
                 this.handleToggle();
             },
             style: {
-                backgroundColor: "#B2FF59"
+                backgroundColor: "#B2FF59",
+                textDecoration: "none"
             },
-            to: ""
+            to: null
         },
         {
             key: "title",
@@ -51,7 +57,7 @@ export default class DrawerMenu extends React.Component<DrawerMenuProps, DrawerM
                 console.log("test");
             },
             style: {
-
+                textDecoration: "none"
             },
             to: "/test"
         },
@@ -62,6 +68,7 @@ export default class DrawerMenu extends React.Component<DrawerMenuProps, DrawerM
                 this.handleToggle();
             },
             style: {
+                textDecoration: "none"
             },
             to: ""
         }
@@ -78,13 +85,21 @@ export default class DrawerMenu extends React.Component<DrawerMenuProps, DrawerM
 
     render() {
         const menus = this.menu_items.map((item) => {
-            return (
-                <Link to={item.to}>
+            if (item.to !== null) {
+                return (
+                    <Link to={item.to} style={this.link_style}>
+                        <MenuItem key={item.key} onTouchTap={item.onTouch} style={item.style}>
+                            {item.displayName}
+                        </MenuItem>
+                    </Link>
+                );
+            } else {
+                return (
                     <MenuItem key={item.key} onTouchTap={item.onTouch} style={item.style}>
-                        {item.displayName}
+                            {item.displayName}
                     </MenuItem>
-                </Link>
-            );
+                );
+            }
         });
         return (
             <div>
