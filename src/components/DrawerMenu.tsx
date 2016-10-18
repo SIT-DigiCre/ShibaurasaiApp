@@ -49,7 +49,7 @@ export default class DrawerMenu extends React.Component<DrawerMenuProps, DrawerM
         const menus = MENU_ITEMS.map((item) => {
             if (item.to !== null) {
                 return (
-                    <Link to={item.to} style={this.link_style}>
+                    <Link to={item.to} style={this.link_style} key={item.key}>
                         <MenuItem key={item.key} onTouchTap={this.handleToggle} style={item.style}>
                             {item.displayName}
                         </MenuItem>
