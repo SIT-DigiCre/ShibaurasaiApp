@@ -20,12 +20,12 @@ export const MENU_ITEMS: MenuItemObject[] = [
         to: null
     },
     {
-        key: "title",
-        displayName: "title",
+        key: "events",
+        displayName: "Event",
         style: {
             textDecoration: "none"
         },
-        to: "/test"
+        to: "/event"
     },
     {
         key: "title2",
