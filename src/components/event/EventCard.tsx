@@ -11,7 +11,7 @@ import { Card, CardActions, CardHeader, CardText } from "material-ui/Card";
 export interface EventInfo {
     title: string;
     building: string;
-    hierarchy: string;
+    floor: string;
     classroom: string;
     jungle: string;
     org: string;
@@ -34,7 +34,7 @@ export class EventCard extends React.Component<EventInfo, {}> {
         }
     };
     render() {
-        const place_name = this.props.building + " " + this.props.hierarchy + " " + this.props.classroom;
+        const place_name = this.props.building + " " + this.props.floor + " " + this.props.classroom;
         return (
             <MuiThemeProvider muiTheme={getMuiTheme(lightBaseTheme)}>
                 <Card style={this.style.card}>
