@@ -2,7 +2,7 @@
     {
         "title":"title sample",
         "building":"x棟",
-        "hierarchy":"n階",
+        "floor":"n階",
         "classroom":"xxxx",
         "jungle":"ジャンル",
         "org": "団体x",
@@ -14,7 +14,7 @@
     {
         "title":"title sample",
         "building":"x棟",
-        "hierarchy":"n階",
+        "floor":"n階",
         "classroom":"xxxx",
         "jungle":"ジャンル",
         "org": "団体x",
