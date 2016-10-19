@@ -1,5 +1,8 @@
 import * as React from "react";
 import { EventCard, EventInfo } from "./EventCard";
+import getMuiTheme from "material-ui/styles/getMuiTheme";
+import lightBaseTheme from "material-ui/styles/baseThemes/lightBaseTheme";
+import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import * as axios from "axios";
 
 interface EventPageState {
@@ -25,16 +28,18 @@ export default class EventPage extends React.Component<{}, EventPageState>{
         if (this.state.json) {
             cards = (this.state.json as EventInfo[]).map((info, index) => {
                 return (
-                    <EventCard {...info} key={index}/>
+                    <EventCard {...info} key={index} />
                 );
             });
         } else {
             cards = (<div>Now Loading...</div>);
         }
         return (
-            <div>
-                {cards}
-            </div>
+            <MuiThemeProvider muiTheme={getMuiTheme(lightBaseTheme)}>
+                <div>
+                    {cards}
+                </div>
+            </MuiThemeProvider>
         );
     }
 }
