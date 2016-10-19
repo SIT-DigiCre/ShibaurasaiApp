@@ -45,7 +45,7 @@ export default class EventList extends React.Component<EventListProps, EventList
         const target_events = all_events.filter((event) => {
             if (this.props.filter_option) {
                 for (let key in this.props.filter_option) {
-                    if (event[key] !== this.props.filter_option[key]) {
+                    if (event[key] && event[key] !== this.props.filter_option[key]) {
                         return false;
                     }
                 }
