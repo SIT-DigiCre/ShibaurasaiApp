@@ -10,7 +10,7 @@ export interface EventInfo {
     building: string;
     floor: string;
     classroom: string;
-    jungle: string;
+    genre: string;
     org: string;
     description: string;
     weburl: string;
