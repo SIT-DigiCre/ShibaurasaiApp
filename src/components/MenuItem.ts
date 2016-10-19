@@ -4,9 +4,35 @@
 interface MenuItemObject {
     key: string;
     displayName: string;
-    onTouch: () => void;
     style: Object;
-    to: string;
+    to: string | null;
 }
 
-export default MenuItemObject;
+
+export const MENU_ITEMS: MenuItemObject[] = [
+    {
+        key: "back",
+        displayName: "Back",
+        style: {
+            backgroundColor: "#B2FF59",
+            textDecoration: "none"
+        },
+        to: null
+    },
+    {
+        key: "events",
+        displayName: "Event",
+        style: {
+            textDecoration: "none"
+        },
+        to: "/event"
+    },
+    {
+        key: "title2",
+        displayName: "title2",
+        style: {
+            textDecoration: "none"
+        },
+        to: ""
+    }
+];

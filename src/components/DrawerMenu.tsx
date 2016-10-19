@@ -3,7 +3,7 @@ import Drawer from "material-ui/Drawer";
 import MenuItem from "material-ui/MenuItem";
 import IconButton from "material-ui/IconButton";
 import FontIcon from "material-ui/FontIcon";
-import MenuItemObject from "./MenuItem";
+import {MENU_ITEMS} from "./MenuItem";
 import AppBar from "material-ui/AppBar";
 import spacing from "material-ui/styles/spacing";
 import { Link } from "react-router";
@@ -31,41 +31,10 @@ export default class DrawerMenu extends React.Component<DrawerMenuProps, DrawerM
         backgroundColor: "#00C853"
     };
 
-    private menu_items: MenuItemObject[] = [
-        {
-            key: "back",
-            displayName: "戻る",
-            onTouch: () => {
-                this.handleToggle();
-            },
-            style: {
-                backgroundColor: "#B2FF59"
-            },
-            to: ""
-        },
-        {
-            key: "title",
-            displayName: "title",
-            onTouch: () => {
-                this.handleToggle();
-                console.log("test");
-            },
-            style: {
-
-            },
-            to: "/test"
-        },
-        {
-            key: "title2",
-            displayName: "title2",
-            onTouch: () => {
-                this.handleToggle();
-            },
-            style: {
-            },
-            to: ""
-        }
-    ];
+    private link_style = {
+        textDecoration: "none",
+        fontWeight: 400
+    };
 
     constructor() {
         super();
@@ -77,14 +46,22 @@ export default class DrawerMenu extends React.Component<DrawerMenuProps, DrawerM
     }
 
     render() {
-        const menus = this.menu_items.map((item) => {
-            return (
-                <Link to={item.to}>
-                    <MenuItem key={item.key} onTouchTap={item.onTouch} style={item.style}>
-                        {item.displayName}
+        const menus = MENU_ITEMS.map((item) => {
+            if (item.to !== null) {
+                return (
+                    <Link to={item.to} style={this.link_style} key={item.key}>
+                        <MenuItem key={item.key} onTouchTap={this.handleToggle} style={item.style}>
+                            {item.displayName}
+                        </MenuItem>
+                    </Link>
+                );
+            } else {
+                return (
+                    <MenuItem key={item.key} onTouchTap={this.handleToggle} style={item.style}>
+                            {item.displayName}
                     </MenuItem>
-                </Link>
-            );
+                );
+            }
         });
         return (
             <div>

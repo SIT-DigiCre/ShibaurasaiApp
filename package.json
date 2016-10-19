@@ -5,11 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start-server": "webpack-dev-server"
+    "start": "webpack-dev-server"
   },
   "author": "sh4869 <nobuk4869@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "@types/axios": "^0.9.32",
     "@types/material-ui": "^0.15.37",
     "@types/react": "^0.14.39",
     "@types/react-dom": "^0.14.17",
@@ -22,6 +23,7 @@
     "babel-preset-react": "^6.16.0",
     "babel-preset-stage-0": "^6.16.0",
     "css-loader": "^0.25.0",
+    "json-loader": "^0.5.4",
     "require-dir": "^0.3.1",
     "style-loader": "^0.13.1",
     "ts-loader": "^0.9.0",
@@ -31,6 +33,7 @@
     "webpack-dev-server": "^1.16.2"
   },
   "dependencies": {
+    "axios": "^0.15.2",
     "material-ui": "^0.16.0",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",

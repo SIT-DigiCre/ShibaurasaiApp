@@ -7,14 +7,14 @@ module.exports = {
   },
   resolve: {
     root: __dirname + 'src/',
-    extensions: ["",".ts",".tsx",".js"]
+    extensions: ["", ".ts", ".tsx", ".js"]
   },
   module: {
     loaders: [
       {
-        test:     /\.tsx?$/,
-        exclude:  /node_modules/,
-        loader:  'ts-loader'
+        test: /\.tsx?$/,
+        exclude: /node_modules/,
+        loader: 'ts-loader'
       },
       {
         test: /\.css$/,
@@ -22,6 +22,10 @@ module.exports = {
           'style-loader',
           'css-loader'
         ]
+      },
+      {
+        test: /\.json$/,
+        loader: 'json'
       }
     ]
   }
