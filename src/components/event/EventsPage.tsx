@@ -1,6 +1,6 @@
 import * as React from "react";
 import { EventCard, EventInfo } from "./EventCard";
-import axios from "axios";
+import * as axios from "axios";
 
 interface EventPageState {
     json: any;
