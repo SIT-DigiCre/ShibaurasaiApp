@@ -41,7 +41,12 @@ export default class EventList extends React.Component<EventListProps, EventList
             textAlign: "center",
         }
     };
-    private selectDisplayEvent(all_events: EventInfo[]) {
+    /**
+     * 表示するイベントを選択します
+     * @param all_events すべてのイベント
+     * @returns 表示するイベント
+     */
+    public selectDisplayEvent(all_events: EventInfo[]): EventInfo[] {
         const target_events = all_events.filter((event) => {
             if (this.props.filter_option) {
                 for (let key in this.props.filter_option) {
