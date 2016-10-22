@@ -5,6 +5,7 @@ import NaviBar from "./components/NaviBar";
 import SimpleContent from "./components/SimpleContent";
 import TestContent from "./components/TestContent";
 import EventPage from "./components/event/EventsPage";
+import StagePage from "./components/stage/StagePage";
 import { Router, Route, hashHistory, IndexRoute } from "react-router";
 injectTapEventPlugin();
 
@@ -27,6 +28,7 @@ ReactDOM.render((
         <Route path="/" component={TestElement}>
             <IndexRoute component={SimpleContent}/>
             <Route path="/event" component={EventPage}/>
+            <Route path="/stage" component={StagePage}/>
        </Route>
     </Router>
 ), document.getElementById("app"));
