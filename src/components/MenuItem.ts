@@ -28,11 +28,11 @@ export const MENU_ITEMS: MenuItemObject[] = [
         to: "/event"
     },
     {
-        key: "title2",
-        displayName: "title2",
+        key: "stage",
+        displayName: "Stage",
         style: {
             textDecoration: "none"
         },
-        to: ""
+        to: "/stage"
     }
 ];
