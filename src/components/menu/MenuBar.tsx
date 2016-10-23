@@ -5,15 +5,15 @@ import lightBaseTheme from "material-ui/styles/baseThemes/lightBaseTheme";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import DrawerMenu from "./DrawerMenu";
 
-interface NaviBarProps {
+interface MenuBarProps {
     appName: string;
 }
 
-interface NaviBarState {
+interface MenuBarState {
     open: boolean;
 }
 
-export default class NaviBar extends React.Component<NaviBarProps, NaviBarState> {
+export default class MenuBar extends React.Component<MenuBarProps, MenuBarState> {
     state = {
         open: false
     };
