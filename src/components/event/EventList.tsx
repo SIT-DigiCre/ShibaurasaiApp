@@ -22,7 +22,7 @@ export default class EventList extends React.Component<EventListProps, EventList
         super();
         this.state = { events: [], searched: false };
     }
-    private ajax_url = "/src/data/events.json";
+    public ajax_url = "/src/data/events.json";
     private style = {
         paper: {
             margin: 5,
@@ -46,11 +46,11 @@ export default class EventList extends React.Component<EventListProps, EventList
      * @param all_events すべてのイベント
      * @returns 表示するイベント
      */
-    public selectDisplayEvent(all_events: EventInfo[]): EventInfo[] {
+    public selectDisplayEvent(all_events: EventInfo[], filter: Object): EventInfo[] {
         const target_events = all_events.filter((event) => {
-            if (this.props.filter_option) {
-                for (let key in this.props.filter_option) {
-                    if (event[key] && event[key] !== this.props.filter_option[key]) {
+            if (filter) {
+                for (let key in filter) {
+                    if (event[key] && event[key] !== filter[key]) {
                         return false;
                     }
                 }
@@ -64,7 +64,7 @@ export default class EventList extends React.Component<EventListProps, EventList
     componentDidMount() {
         axios.get(this.ajax_url).then(
             (response) => {
-                const target_events = this.selectDisplayEvent(response.data as EventInfo[]);
+                const target_events = this.selectDisplayEvent(response.data as EventInfo[], this.props.filter_option);
                 this.setState({ "events": target_events, searched: true });
             }
         );
