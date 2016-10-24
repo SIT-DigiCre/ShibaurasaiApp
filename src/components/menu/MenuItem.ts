@@ -34,5 +34,13 @@ export const MENU_ITEMS: MenuItemObject[] = [
             textDecoration: "none"
         },
         to: "/stage"
+    },
+    {
+        key: "search",
+        displayName: "Search",
+        style: {
+            textDecoration: "none"
+        },
+        to: "/search"
     }
 ];

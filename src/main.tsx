@@ -5,6 +5,8 @@ import MenuBar from "./components/menu/MenuBar";
 import SimpleContent from "./components/SimpleContent";
 import EventPage from "./components/event/EventsPage";
 import StagePage from "./components/stage/StagePage";
+import SearchPage from "./components/search/SearchPage";
+
 import { Router, Route, hashHistory, IndexRoute } from "react-router";
 injectTapEventPlugin();
 
@@ -22,12 +24,14 @@ class TestElement extends React.Component<Text, {}> {
         );
     }
 }
+
 ReactDOM.render((
     <Router history={hashHistory}>
         <Route path="/" component={TestElement}>
             <IndexRoute component={SimpleContent}/>
             <Route path="/event" component={EventPage}/>
             <Route path="/stage" component={StagePage}/>
+            <Route path="/search" component={SearchPage}/>
        </Route>
     </Router>
 ), document.getElementById("app"));
