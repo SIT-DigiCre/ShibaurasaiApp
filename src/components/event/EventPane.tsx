@@ -1,21 +1,22 @@
 import * as React from "react";
 import { EventCard, EventInfo } from "./EventCard";
-import getMuiTheme from "material-ui/styles/getMuiTheme";
-import lightBaseTheme from "material-ui/styles/baseThemes/lightBaseTheme";
-import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import * as axios from "axios";
 
-interface EventPageState {
+interface EventPaneProps {
+    ajax_url: string;
+}
+
+interface EventPaneState {
     json: any;
 }
 
-export default class EventPage extends React.Component<{}, EventPageState>{
+export default class EventPane extends React.Component<EventPaneProps, EventPaneState>{
     constructor() {
         super();
         this.state = { json: "" };
     }
     componentDidMount() {
-        axios.get("/src/data/events.json").then(
+        axios.get(this.props.ajax_url).then(
             (response) => {
                 this.setState({ json: response.data });
                 console.log(this);
@@ -35,11 +36,9 @@ export default class EventPage extends React.Component<{}, EventPageState>{
             cards = (<div>Now Loading...</div>);
         }
         return (
-            <MuiThemeProvider muiTheme={getMuiTheme(lightBaseTheme)}>
-                <div>
-                    {cards}
-                </div>
-            </MuiThemeProvider>
+            <div>
+                {cards}
+            </div>
         );
     }
 }
