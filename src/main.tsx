@@ -3,7 +3,7 @@ import * as ReactDOM from "react-dom";
 import * as injectTapEventPlugin from "react-tap-event-plugin";
 import MenuBar from "./components/menu/MenuBar";
 import SimpleContent from "./components/SimpleContent";
-import EventPage from "./components/event/EventsPage";
+import EventPage from "./components/event/EventPage";
 import StagePage from "./components/stage/StagePage";
 import SearchPage from "./components/search/SearchPage";
 import MapPage from "./components/map/MapPage";
