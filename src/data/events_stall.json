@@ -1,0 +1,26 @@
+[
+    {
+        "title":"title sample2",
+        "building":"x棟",
+        "floor":"n階",
+        "classroom":"xxxx",
+        "genre":"ジャンル",
+        "org": "団体x",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mattis pretium massa. Aliquam erat volutpat. Nulla facilisi. Donec vulputate interdum sollicitudin. Nunc lacinia auctor quam sed pellentesque. Aliquam dui mauris, mattis quis lacus id, pellentesque lobortis odio.",
+        "weburl": "http://example.com",
+        "twitter": "example",
+        "mail": "mail@example.com"
+    },
+    {
+        "title":"title sample",
+        "building":"x棟",
+        "floor":"n階",
+        "classroom":"xxxx",
+        "genre":"ジャンル",
+        "org": "団体x",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mattis pretium massa. Aliquam erat volutpat. Nulla facilisi. Donec vulputate interdum sollicitudin. Nunc lacinia auctor quam sed pellentesque. Aliquam dui mauris, mattis quis lacus id, pellentesque lobortis odio.",
+        "weburl": "http://example.com",
+        "twitter": "example",
+        "mail": "mail@example.com"
+    }
+]
