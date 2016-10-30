@@ -4,6 +4,7 @@ import Avatar from "material-ui/Avatar";
 import Chip from "material-ui/Chip";
 import { blue300, indigo900, white, cyan500 } from "material-ui/styles/colors";
 import { Card, CardActions, CardHeader, CardText } from "material-ui/Card";
+import { DescriptionConverterGenerator } from "../utils/DescriptionConverter";
 
 export interface EventInfo {
     title: string;
@@ -19,6 +20,10 @@ export interface EventInfo {
 }
 
 export class EventCard extends React.Component<EventInfo, {}> {
+    private converter = DescriptionConverterGenerator.getConverter();
+    constructor() {
+        super();
+    }
     private style = {
         card: {
             padding: 5,
@@ -42,7 +47,8 @@ export class EventCard extends React.Component<EventInfo, {}> {
                     titleStyle={this.style.card.header.title}
                     />
                 <CardText expandable={true}>
-                    {this.props.description}
+                    <div dangerouslySetInnerHTML={{__html: this.converter.makeHtml(this.props.description)}}>
+                    </div>
                     <a href={this.props.weburl}> WebPage </a>
                 </CardText>
             </Card>
