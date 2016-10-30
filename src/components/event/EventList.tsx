@@ -10,6 +10,7 @@ interface EventListProps {
     filter_option: Object | null;
     title: string;
     null_message: string;
+    ajax_url: string;
 }
 
 interface EventListState {
@@ -22,7 +23,6 @@ export default class EventList extends React.Component<EventListProps, EventList
         super();
         this.state = { events: [], searched: false };
     }
-    public ajax_url = "/src/data/events.json";
     private style = {
         paper: {
             margin: 5,
@@ -62,7 +62,7 @@ export default class EventList extends React.Component<EventListProps, EventList
         return target_events;
     };
     componentDidMount() {
-        axios.get(this.ajax_url).then(
+        axios.get(this.props.ajax_url).then(
             (response) => {
                 const target_events = this.selectDisplayEvent(response.data as EventInfo[], this.props.filter_option);
                 this.setState({ "events": target_events, searched: true });
