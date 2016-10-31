@@ -3,6 +3,7 @@ import * as ReactDOM from "react-dom";
 import * as injectTapEventPlugin from "react-tap-event-plugin";
 import MenuBar from "./components/menu/MenuBar";
 import SimpleContent from "./components/SimpleContent";
+import TopPage from "./components/top/TopPage";
 import EventPage from "./components/event/EventPage";
 import StagePage from "./components/stage/StagePage";
 import SearchPage from "./components/search/SearchPage";
@@ -20,7 +21,7 @@ class TestElement extends React.Component<Text, {}> {
         return (
             <div className="test">
                 <MenuBar appName="Shibaura Fes Navi" />
-                {this.props.children || <SimpleContent/>}
+                {this.props.children || <TopPage/>}
             </div>
         );
     }
@@ -29,7 +30,7 @@ class TestElement extends React.Component<Text, {}> {
 ReactDOM.render((
     <Router history={hashHistory}>
         <Route path="/" component={TestElement}>
-            <IndexRoute component={SimpleContent}/>
+            <IndexRoute component={TopPage}/>
             <Route path="/event" component={EventPage}/>
             <Route path="/stage" component={StagePage}/>
             <Route path="/search" component={SearchPage}/>
