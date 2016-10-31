@@ -29,6 +29,7 @@ export default class StagePage extends React.Component<{}, StagePageState>{
         },
         slide: {
             padding: 10,
+            overflowY: "hidden",
         },
     };
     
