@@ -47,7 +47,7 @@ export default class EventPage extends React.Component<{}, EventPageState>{
                     <SwipeableViews
                         index={this.state.slideIndex}
                         onChangeIndex={this.handleChange.bind(this)}
-                    >
+                        >
                         <EventPane ajax_url={"/src/data/events_room.json"} />
                         <EventPane ajax_url={"/src/data/events_stall.json"} />
                     </SwipeableViews>

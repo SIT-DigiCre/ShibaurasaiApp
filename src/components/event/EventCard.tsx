@@ -1,9 +1,5 @@
 import * as React from "react";
-import Paper from "material-ui/Paper";
-import Avatar from "material-ui/Avatar";
-import Chip from "material-ui/Chip";
-import { blue300, indigo900, white, cyan500 } from "material-ui/styles/colors";
-import { Card, CardActions, CardHeader, CardText } from "material-ui/Card";
+import { Card, CardHeader, CardText } from "material-ui/Card";
 import { DescriptionConverterGenerator } from "../utils/DescriptionConverter";
 
 export interface EventInfo {

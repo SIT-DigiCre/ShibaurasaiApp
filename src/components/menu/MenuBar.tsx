@@ -1,5 +1,4 @@
 import * as React from "react";
-import "material-ui";
 import getMuiTheme from "material-ui/styles/getMuiTheme";
 import lightBaseTheme from "material-ui/styles/baseThemes/lightBaseTheme";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";

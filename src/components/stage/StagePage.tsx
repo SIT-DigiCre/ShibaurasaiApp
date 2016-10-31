@@ -1,7 +1,6 @@
 import * as React from "react";
 import SwipeableViews from "react-swipeable-views";
 import { Tabs, Tab } from "material-ui/Tabs";
-import { StageGridList, StageGridListProps } from "./StageGridList";
 import StageGridPane from "./StageGridPane";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import getMuiTheme from "material-ui/styles/getMuiTheme";
@@ -53,11 +52,13 @@ export default class StagePage extends React.Component<{}, StagePageState>{
                         >
                         <div style={this.styles.slide}>
                             <StageGridPane
-                                ajax_url={"/src/data/stages_day1.json"} />
+                                ajax_url={"/src/data/stages_day1.json"}
+                                />
                         </div>
                         <div style={this.styles.slide}>
                             <StageGridPane
-                                ajax_url={"/src/data/stages_day2.json"} />
+                                ajax_url={"/src/data/stages_day2.json"}
+                                />
                         </div>
                         <div style={this.styles.slide}>
                             <StageGridPane

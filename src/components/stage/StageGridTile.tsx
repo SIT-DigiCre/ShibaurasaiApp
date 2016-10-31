@@ -33,11 +33,11 @@ export class StageGridTile extends React.Component<StageInfo, {}> {
                 title={this.props.title}
                 >
                 <div>
-                {this.props.title}
-                {this.props.genre}
-                {this.props.time}
-                {this.props.org}
-                {this.props.description}
+                    {this.props.title}
+                    {this.props.genre}
+                    {this.props.time}
+                    {this.props.org}
+                    {this.props.description}
                 </div>
             </GridTile>
         );

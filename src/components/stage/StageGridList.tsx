@@ -1,8 +1,5 @@
 import * as React from "react";
 import { StageGridTile, StageInfo } from "./StageGridTile";
-import getMuiTheme from "material-ui/styles/getMuiTheme";
-import lightBaseTheme from "material-ui/styles/baseThemes/lightBaseTheme";
-import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import GridList from "material-ui/GridList";
 import * as axios from "axios";
 
