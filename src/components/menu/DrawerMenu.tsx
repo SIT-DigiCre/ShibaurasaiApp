@@ -1,8 +1,6 @@
 import * as React from "react";
 import Drawer from "material-ui/Drawer";
 import MenuItem from "material-ui/MenuItem";
-import IconButton from "material-ui/IconButton";
-import FontIcon from "material-ui/FontIcon";
 import {MENU_ITEMS} from "./MenuItem";
 import AppBar from "material-ui/AppBar";
 import spacing from "material-ui/styles/spacing";
