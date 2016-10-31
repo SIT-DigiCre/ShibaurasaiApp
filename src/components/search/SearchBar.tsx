@@ -101,7 +101,8 @@ export default class SearchBar extends React.Component<SearchBarProps, SearchBar
                                         label="検索"
                                         primary={true}
                                         onTouchTap={this.handleSearchButtonTouchTaped}
-                                        style={this.style.root.searchbutton.mobile} />
+                                        style={this.style.root.searchbutton.mobile}
+                                        />
                                     {dropdown_menu}
                                 </div>
                             );

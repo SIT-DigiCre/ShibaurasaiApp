@@ -68,8 +68,10 @@ export default class DrawerMenu extends React.Component<DrawerMenuProps, DrawerM
                     onLeftIconButtonTouchTap={this.handleToggle}
                     style={this.appbar_style}
                     />
-                <Drawer open={this.state.open}
-                    width={spacing.desktopKeylineIncrement * 5}>
+                <Drawer
+                    open={this.state.open}
+                    width={spacing.desktopKeylineIncrement * 5}
+                    >
                     {menus}
                 </Drawer>
             </div>

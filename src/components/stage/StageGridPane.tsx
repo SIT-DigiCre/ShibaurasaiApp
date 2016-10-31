@@ -52,9 +52,12 @@ export default class StageGridPane extends React.Component<StageGridPaneProps, S
                     label={tab_title.title}
                     key={tab_title.key}
                     value={index}
-                    style={this.style.tab}>
-                    <StageGridList null_message={"Not Found"}
-                        stages={this.state.stages[index]} />
+                    style={this.style.tab}
+                    >
+                    <StageGridList
+                        null_message={"Not Found"}
+                        stages={this.state.stages[index]}
+                        />
                 </Tab>
             );
         });
