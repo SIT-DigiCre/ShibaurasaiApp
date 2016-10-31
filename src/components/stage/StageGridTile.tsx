@@ -10,6 +10,7 @@ export interface StageInfo {
     weburl: string;
     twitter: string;
     mail: string;
+    place: number;
 }
 
 export class StageGridTile extends React.Component<StageInfo, {}> {
@@ -37,7 +38,7 @@ export class StageGridTile extends React.Component<StageInfo, {}> {
                 {this.props.time}
                 {this.props.org}
                 {this.props.description}
-                </div> 
+                </div>
             </GridTile>
         );
     }
