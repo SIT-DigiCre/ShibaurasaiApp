@@ -1,7 +1,6 @@
 import * as React from "react";
 import SwipeableViews from "react-swipeable-views";
 import { Tabs, Tab } from "material-ui/Tabs";
-import { StageGridList, StageGridListProps } from "./StageGridList";
 import StageGridPane from "./StageGridPane";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import getMuiTheme from "material-ui/styles/getMuiTheme";
