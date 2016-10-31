@@ -33,6 +33,12 @@ export class EventCard extends React.Component<EventInfo, {}> {
     };
     render() {
         const place_name = this.props.building + " " + this.props.floor + " " + this.props.classroom;
+        let link;
+        if (this.props.weburl !== "") {
+            link = (<a href={this.props.weburl}> WebPage </a>);
+        } else {
+            link = null;
+        }
         return (
             <Card style={this.style.card}>
                 <CardHeader
@@ -43,9 +49,9 @@ export class EventCard extends React.Component<EventInfo, {}> {
                     titleStyle={this.style.card.header.title}
                     />
                 <CardText expandable={true}>
-                    <div dangerouslySetInnerHTML={{__html: this.converter.makeHtml(this.props.description)}}>
+                    <div dangerouslySetInnerHTML={{ __html: this.converter.makeHtml(this.props.description) }}>
                     </div>
-                    <a href={this.props.weburl}> WebPage </a>
+                    {link}
                 </CardText>
             </Card>
         );
