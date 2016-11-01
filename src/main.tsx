@@ -9,6 +9,7 @@ import StagePage from "./components/stage/StagePage";
 import SearchPage from "./components/search/SearchPage";
 import MapPage from "./components/map/MapPage";
 import MapEventList from "./components/map/MapEventList";
+import AboutPage from "./components/about/AboutPage";
 
 import { Router, Route, hashHistory, IndexRoute } from "react-router";
 injectTapEventPlugin();
@@ -37,6 +38,7 @@ ReactDOM.render((
             <Route path="/search" component={SearchPage} />
             <Route path="/map" component={MapPage} />
             <Route path="/building/:building/:room_or_stall" component={MapEventList} />
+            <Route path="/about" component={AboutPage} />
         </Route>
     </Router>
 ), document.getElementById("app"));
