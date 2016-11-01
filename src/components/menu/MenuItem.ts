@@ -58,5 +58,20 @@ export const MENU_ITEMS: MenuItemObject[] = [
             textDecoration: "none"
         },
         to: "/map"
+    },
+    {
+        key: "divider",
+        displayName: "",
+        style: {
+        },
+        to: ""
+    },
+    {
+        key: "about",
+        displayName: "About",
+        style: {
+            textDecoration: "none"
+        },
+        to: "/about"
     }
 ];
