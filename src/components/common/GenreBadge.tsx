@@ -9,7 +9,7 @@ import AccessibilityIcon from "material-ui/svg-icons/action/accessibility";
 import FaceIcon from "material-ui/svg-icons/action/face";
 import { lightGreenA200, greenA400, white } from "material-ui/styles/colors";
 
-interface EventCardBadgeProps {
+interface GenreCardBadgeProps {
     type: string;
     style: React.CSSProperties;
 }
@@ -21,7 +21,7 @@ const genre_variety: { [key: string]: React.ReactElement<any> } = {
     "スイーツ": (<CakeIcon />),
     "食事": (<RestaurantMenuIcon />)
 };
-const EventCardBadge: React.SFC<EventCardBadgeProps> = (props: EventCardBadgeProps) => {
+const GenreBadge: React.SFC<GenreCardBadgeProps> = (props: GenreCardBadgeProps) => {
     return (
         <div style={props.style}>
             <Chip backgroundColor={lightGreenA200}>
@@ -31,4 +31,4 @@ const EventCardBadge: React.SFC<EventCardBadgeProps> = (props: EventCardBadgePro
         </div>
     );
 };
-export default EventCardBadge;
+export default GenreBadge;

@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Card, CardHeader, CardText, CardTitle } from "material-ui/Card";
 import { DescriptionConverterGenerator } from "../utils/DescriptionConverter";
-import EventCardBadge from "./EventCardBadge";
+import GenreBadge from "../common/GenreBadge";
 import { List, ListItem } from "material-ui/List";
 import MailIcon from "material-ui/svg-icons/content/mail";
 import LinkIcon from "material-ui/svg-icons/content/link";
@@ -78,7 +78,7 @@ export class EventCard extends React.Component<EventInfo, {}> {
                     actAsExpander={true}
                     style={this.style.card.title}
                     subtitle={place_name}>
-                    <EventCardBadge
+                    <GenreBadge
                         type={this.props.genre}
                         style={this.style.card.badge} />
                 </CardTitle>
