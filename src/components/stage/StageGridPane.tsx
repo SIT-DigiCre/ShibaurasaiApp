@@ -18,7 +18,7 @@ interface StageTab {
     key: string;
 }
 export default class StageGridPane extends React.Component<StageGridPaneProps, StageGridPaneState> {
-    private tab_titles: StageTab[] = [{ "title": "大講義室", "key": "lecture" }, { "title": "野外ステージ", "key": "out" }];
+    private tab_titles: StageTab[] = [{ "title": "野外ステージ", "key": "out" }, { "title": "大講義室", "key": "lecture" }];
     state = {
         stages: { 0: [], 1: [] }
     };
