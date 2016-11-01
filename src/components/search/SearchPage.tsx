@@ -12,7 +12,7 @@ interface SearchPageState {
 }
 
 export default class SearchPage extends React.Component<{}, SearchPageState> {
-    private urls = { "stall": "/src/data/events_stall.json", "room": "/src/data/events_room.json" };
+    private urls = { "stall": "src/data/events_stall.json", "room": "src/data/events_room.json" };
     state = {
         search_option: null,
         search_text: "",

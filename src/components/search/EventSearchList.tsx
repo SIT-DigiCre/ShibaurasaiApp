@@ -4,7 +4,7 @@ import * as axios from "axios";
 
 export default class EventSearchList extends EventList {
     private cache: { [key: string]: Object } = {};
-    private ajax_urls = ["/src/data/events_room.json", "/src/data/events_stall.json"];
+    private ajax_urls = ["src/data/events_room.json", "src/data/events_stall.json"];
     public selectDisplayEvent(all_events: EventInfo[], filter_obj: Object) {
         const target_event = all_events.filter((event) => {
             for (let key in filter_obj) {
