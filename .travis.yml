@@ -1,6 +1,10 @@
 language: node_js
-node_js:
- "6.3.0"
+node_js: 
+  "6.3.0"
 sudo: false
 script:
-  - '( [ "$TRAVIS_BRANCH" == "master" ]  || [ "$TRAVIS_BRANCH" == "develop" ] ) && [ "$TRAVIS_PULL_REQUEST" == "false" ] && npm run deploy'
+  - 'echo Hello,World!'
+  # TODO: Write Test
+after_success:
+  - '([ "$TRAVIS_BRANCH" == "master" ] || [ "$TRAVIS_BRANCH" == "develop" ]) && [ "$TRAVIS_PULL_REQUEST" == "false" ] && npm run deploy'
+  - '([ "$TRAVIS_PULL_REQUEST" != "develop" ] && [ "$TRAVIS_PULL_REQUEST" != "master" ]) && npm run build'
