@@ -47,12 +47,12 @@ export default class DrawerMenu extends React.Component<DrawerMenuProps, DrawerM
     render() {
         const menus = MENU_ITEMS.map((item) => {
             if (item.key === "divider") {
-                return (<Divider />);
+                return (<Divider key={item.key}/>);
             } else if (item.to !== null) {
                 return (
                     <Link to={item.to} style={this.link_style} key={item.key}>
                         <MenuItem key={item.key} onTouchTap={this.handleToggle} style={item.style}>
-                            {item.displayName}
+                          <span>  {item.displayName} </span>
                         </MenuItem>
                     </Link>
                 );
