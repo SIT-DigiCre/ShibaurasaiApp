@@ -29,8 +29,6 @@ export default class LinkMarker extends React.Component<LinkMarkerProps, LinkMar
         const marker = new google.maps.Marker(
             {
                 position: this.props.position,
-                title: "test",
-                label: "A"
             }
         );
         marker.setMap(this.context.map);
