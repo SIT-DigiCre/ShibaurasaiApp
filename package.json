@@ -24,6 +24,7 @@
     "@types/react-tap-event-plugin": "0.0.30",
     "@types/showdown": "^1.4.31",
     "css-loader": "^0.25.0",
+    "es6-promise": "^4.0.5",
     "fs-extra": "^1.0.0",
     "json-loader": "^0.5.4",
     "style-loader": "^0.13.1",

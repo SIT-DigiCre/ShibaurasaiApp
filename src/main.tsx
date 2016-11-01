@@ -1,5 +1,6 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
+import {polyfill} from "es6-promise";
 import * as injectTapEventPlugin from "react-tap-event-plugin";
 import MenuBar from "./components/menu/MenuBar";
 import SimpleContent from "./components/SimpleContent";
@@ -10,9 +11,9 @@ import SearchPage from "./components/search/SearchPage";
 import MapPage from "./components/map/MapPage";
 import MapEventList from "./components/map/MapEventList";
 import AboutPage from "./components/about/AboutPage";
-
 import { Router, Route, hashHistory, IndexRoute } from "react-router";
 injectTapEventPlugin();
+polyfill();
 
 interface Text {
     content: string;
