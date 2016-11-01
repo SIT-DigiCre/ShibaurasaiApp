@@ -23,7 +23,7 @@ export class DescriptionConverterGenerator {
                     type: "lang",
                     regex: /&big\(\){([^}]*)}/g,
                     replace: (match, prefix) => {
-                        return "Big: " + prefix; // TODO: 文字を大きくする方法を考える
+                        return "<span style=\"font-size: 16px;\">" + prefix + "</span>"; // TODO: 文字を大きくする方法を考える
                     }
                 }
             };
