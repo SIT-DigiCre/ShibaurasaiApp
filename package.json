@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server",
+    "build": "webpack && uglifyjs  --compress  --output www/js/main.js -- www/js/main.js"
   },
   "author": "sh4869 <nobuk4869@gmail.com>",
   "license": "MIT",
@@ -28,6 +29,7 @@
     "ts-loader": "^0.9.0",
     "tslint": "^3.15.1",
     "typescript": "^2.0.3",
+    "uglify-js": "^2.7.4",
     "webpack": "^1.13.2",
     "webpack-dev-server": "^1.16.2"
   },
