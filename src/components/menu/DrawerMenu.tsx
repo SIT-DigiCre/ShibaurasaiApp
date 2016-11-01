@@ -1,10 +1,11 @@
 import * as React from "react";
 import Drawer from "material-ui/Drawer";
 import MenuItem from "material-ui/MenuItem";
-import {MENU_ITEMS} from "./MenuItem";
+import { MENU_ITEMS } from "./MenuItem";
 import AppBar from "material-ui/AppBar";
 import spacing from "material-ui/styles/spacing";
 import { Link } from "react-router";
+import Divider from "material-ui/Divider";
 
 interface DrawerMenuProps {
     appBarTitle: string;
@@ -45,7 +46,9 @@ export default class DrawerMenu extends React.Component<DrawerMenuProps, DrawerM
 
     render() {
         const menus = MENU_ITEMS.map((item) => {
-            if (item.to !== null) {
+            if (item.key === "divider") {
+                return (<Divider />);
+            } else if (item.to !== null) {
                 return (
                     <Link to={item.to} style={this.link_style} key={item.key}>
                         <MenuItem key={item.key} onTouchTap={this.handleToggle} style={item.style}>
@@ -56,7 +59,7 @@ export default class DrawerMenu extends React.Component<DrawerMenuProps, DrawerM
             } else {
                 return (
                     <MenuItem key={item.key} onTouchTap={this.handleToggle} style={item.style}>
-                            {item.displayName}
+                        {item.displayName}
                     </MenuItem>
                 );
             }
