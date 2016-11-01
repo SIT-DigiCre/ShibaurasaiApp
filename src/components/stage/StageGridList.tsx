@@ -1,6 +1,7 @@
 import * as React from "react";
 import { StageGridTile, StageInfo } from "./StageGridTile";
 import GridList from "material-ui/GridList";
+import * as MediaQuery from "react-responsive";
 import * as axios from "axios";
 
 export interface StageGridListProps {
@@ -41,12 +42,33 @@ export class StageGridList extends React.Component<StageGridListProps, StageGrid
             });
         }
         return (
-            <GridList
-                cols={1}
-                style={this.styles.gridList}
-                >
-                {tiles}
-            </GridList>
+            <div>
+                <MediaQuery minDeviceWidth={800}>
+                    {(matched) => {
+                        if (matched) {
+                            return (
+                                <GridList
+                                    cols={1}
+                                    style={this.styles.gridList}
+                                    cellHeight={240}
+                                    >
+                                    {tiles}
+                                </GridList>
+                            );
+                        } else {
+                            return (
+                                <GridList
+                                    cols={1}
+                                    style={this.styles.gridList}
+                                    cellHeight={330}
+                                    >
+                                    {tiles}
+                                </GridList>
+                            );
+                        }
+                    } }
+                </MediaQuery>
+            </div>
         )
     }
 }
