@@ -11,7 +11,7 @@ import { lightGreenA200, greenA400, white } from "material-ui/styles/colors";
 
 interface GenreCardBadgeProps {
     type: string;
-    style: React.CSSProperties;
+    style: React.CSSProperties | null;
 }
 const genre_variety: { [key: string]: React.ReactElement<any> } = {
     "体験系": (<AccessibilityIcon />),
