@@ -24,4 +24,5 @@
         <allow-intent href="itms-apps:*" />
     </platform>
     <engine name="android" spec="~5.2.2" />
+    <hook type="before_build" src="hooks/before_build/build_webpackproject.js" />
 </widget>
