@@ -6,7 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server",
-    "build": "webpack && uglifyjs  --compress  --output www/js/main.js -- www/js/main.js"
+    "build": "npm-run-all build:*",
+    "build:js": "webpack && uglifyjs  --compress unused  --output www/js/main.js -- www/js/main.js",
+    "corodva": "cordova build android",
+    "build:copy": "node scripts/build.js"
   },
   "author": "sh4869 <nobuk4869@gmail.com>",
   "license": "MIT",
@@ -27,6 +30,7 @@
     "es6-promise": "^4.0.5",
     "fs-extra": "^1.0.0",
     "json-loader": "^0.5.4",
+    "npm-run-all": "^3.1.1",
     "style-loader": "^0.13.1",
     "ts-loader": "^0.9.0",
     "tslint": "^3.15.1",
