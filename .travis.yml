@@ -7,4 +7,4 @@ script:
   # TODO: Write Test
 after_success:
   - '([ "$TRAVIS_BRANCH" == "master" ] || [ "$TRAVIS_BRANCH" == "develop" ]) && [ "$TRAVIS_PULL_REQUEST" == "false" ] && npm run deploy'
-  - '([ "$TRAVIS_PULL_REQUEST" != "develop" ] && [ "$TRAVIS_PULL_REQUEST" != "master" ]) && npm run build'
+  - '([ "$TRAVIS_PULL_REQUEST" == "true" ] || [ "$TRAVIS_BRANCH" != "develop" ]) && npm run build'
