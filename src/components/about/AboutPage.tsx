@@ -39,7 +39,8 @@ const AboutPage: React.SFC<{}> = (props) => {
                 </div>
                 <h2>開発者について</h2>
                 <ul>
-                    <li>企画考案者</li>
+                    <li>企画考案者 : MiniDragonEgg</li>
+                    <li>開発者 : Yoshiki Imaizumi</li>
                     <li>開発者 : Nobuhiro Kasai  <a href="http://sh4869.net" style={style.text.link}>WebSite</a></li>
                     <li>団体 : デジクリ <a href="http://www.digicre.net/" style={style.text.link}>WebSite</a></li>
                 </ul>
