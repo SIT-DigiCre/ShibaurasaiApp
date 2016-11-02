@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-eval' data: gap: https://ssl.gstatic.com https://fonts.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline' 'unsafe-eval' *.googleapis.com; media-src *; connect-src *; script-src *;img-src  *">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-eval' data: gap: https://ssl.gstatic.com https://fonts.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline' 'unsafe-eval' *.googleapis.com; media-src *; connect-src *; script-src 'unsafe-inline' 'unsafe-eval'  data: *;img-src  *">
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
@@ -19,6 +19,16 @@
         <meta content="芝浦祭をもっと面白くするナビゲーションアプリケーションです" property="og:description">
         <link rel="stylesheet" href="css/fonts/material-icons.css">
         <link rel="stylesheet" href="css/Roboto/roboto.css">
+        <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-46319605-15', 'auto');
+        ga('send', 'pageview');
+
+        </script>
         <style>
             * {
                 font-family:"Roboto",sans-serif;
