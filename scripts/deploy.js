@@ -1,5 +1,5 @@
 const ghpages = require("gh-pages");
-const paht = require("path");
+const path = require("path");
 
 const GH_TOKEN = process.env.GH_TOKEN;
 
