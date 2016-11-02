@@ -4,6 +4,7 @@ import Paper from "material-ui/Paper";
 import getMuiTheme from "material-ui/styles/getMuiTheme";
 import lightBaseTheme from "material-ui/styles/baseThemes/lightBaseTheme";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
+import LoadingPage from "../common/LoadingPage";
 import * as axios from "axios";
 
 interface EventListProps {
@@ -82,7 +83,7 @@ export default class EventList extends React.Component<EventListProps, EventList
             if (this.state.searched) {
                 cards = (<div style={this.style.null_message}><h3>{this.props.null_message}</h3></div>);
             } else {
-                cards = (<div>Loading……</div>);
+                cards = (<LoadingPage />);
             }
         }
         return (

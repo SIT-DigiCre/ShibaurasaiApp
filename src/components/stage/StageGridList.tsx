@@ -60,7 +60,7 @@ export class StageGridList extends React.Component<StageGridListProps, StageGrid
                                 <GridList
                                     cols={1}
                                     style={this.styles.gridList}
-                                    cellHeight={330}
+                                    cellHeight={370}
                                     >
                                     {tiles}
                                 </GridList>

@@ -1,5 +1,6 @@
 import * as React from "react";
 import { EventCard, EventInfo } from "./EventCard";
+import LoadingPage from "../common/LoadingPage";
 import * as axios from "axios";
 
 interface EventPaneProps {
@@ -32,7 +33,7 @@ export default class EventPane extends React.Component<EventPaneProps, EventPane
                 );
             });
         } else {
-            cards = (<div>Now Loading...</div>);
+            cards = (<LoadingPage />);
         }
         return (
             <div>

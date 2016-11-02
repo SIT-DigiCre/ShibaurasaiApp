@@ -1,6 +1,6 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import {polyfill} from "es6-promise";
+import { polyfill } from "es6-promise";
 import * as injectTapEventPlugin from "react-tap-event-plugin";
 import MenuBar from "./components/menu/MenuBar";
 import SimpleContent from "./components/SimpleContent";
@@ -12,6 +12,7 @@ import MapPage from "./components/map/MapPage";
 import MapEventList from "./components/map/MapEventList";
 import AboutPage from "./components/about/AboutPage";
 import { Router, Route, hashHistory, IndexRoute } from "react-router";
+import spacing from "material-ui/styles/spacing";
 injectTapEventPlugin();
 polyfill();
 
@@ -24,7 +25,9 @@ class TestElement extends React.Component<Text, {}> {
         return (
             <div className="test">
                 <MenuBar appName="Shibaura Fes Navi" />
-                {this.props.children || <TopPage />}
+                <div style={{margin:`${spacing.desktopGutter * 3}px ${spacing.desktopGutter}px`}}>
+                    {this.props.children || <TopPage />}
+                </div>
             </div>
         );
     }

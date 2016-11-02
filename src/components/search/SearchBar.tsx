@@ -17,7 +17,7 @@ interface SearchBarState {
 }
 
 export default class SearchBar extends React.Component<SearchBarProps, SearchBarState> {
-    private search_options: string[][] = [["stall", "屋台"], ["room", "展示"]];
+    private search_options: string[][] = [["room", "展示"], ["stall", "屋台"]];
     private style = {
         root: {
             width: "100%",
