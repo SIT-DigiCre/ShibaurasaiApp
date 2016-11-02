@@ -27,7 +27,10 @@ export default class DrawerMenu extends React.Component<DrawerMenuProps, DrawerM
      * AppBar Style Object
      */
     private appbar_style = {
-        backgroundColor: "#00C853"
+        backgroundColor: "#00C853",
+        position: "fixed",
+        zIndex: 3,
+        top: 0
     };
 
     private link_style = {
@@ -47,12 +50,12 @@ export default class DrawerMenu extends React.Component<DrawerMenuProps, DrawerM
     render() {
         const menus = MENU_ITEMS.map((item) => {
             if (item.key === "divider") {
-                return (<Divider key={item.key}/>);
+                return (<Divider key={item.key} />);
             } else if (item.to !== null) {
                 return (
                     <Link to={item.to} style={this.link_style} key={item.key}>
                         <MenuItem key={item.key} onTouchTap={this.handleToggle} style={item.style}>
-                          <span>  {item.displayName} </span>
+                            <span>  {item.displayName} </span>
                         </MenuItem>
                     </Link>
                 );
