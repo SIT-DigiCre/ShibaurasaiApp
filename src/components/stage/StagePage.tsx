@@ -52,17 +52,17 @@ export default class StagePage extends React.Component<{}, StagePageState>{
                         >
                         <div style={this.styles.slide}>
                             <StageGridPane
-                                ajax_url={"/src/data/stages_day1.json"}
+                                ajax_url={"src/data/stages_day1.json"}
                                 />
                         </div>
                         <div style={this.styles.slide}>
                             <StageGridPane
-                                ajax_url={"/src/data/stages_day2.json"}
+                                ajax_url={"src/data/stages_day2.json"}
                                 />
                         </div>
                         <div style={this.styles.slide}>
                             <StageGridPane
-                                ajax_url={"/src/data/stages_day3.json"}
+                                ajax_url={"src/data/stages_day3.json"}
                                 />
                         </div>
                     </SwipeableViews>

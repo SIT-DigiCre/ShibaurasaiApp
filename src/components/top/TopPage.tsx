@@ -28,8 +28,8 @@ const TopPage: React.SFC<{}> = () => {
             <div>
                 {menus.map((menu) => {
                     return (
-                        <Link to={menu[2]} style={style.link_style}>
-                            <Paper zDepth={1} style={style.paper} key={menu[0]}>
+                        <Link to={menu[2]} style={style.link_style} key={menu[0]}>
+                            <Paper zDepth={1} style={style.paper}>
                                 <h2>{menu[0]}</h2>
                                 {menu[1]}
                             </Paper>

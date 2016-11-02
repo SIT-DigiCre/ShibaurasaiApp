@@ -43,7 +43,7 @@ export default class GoogleMap extends React.Component<GoogleMapProps, GoogleMap
         if (this.state.map) {
             return (
                 <div>
-                    <div ref="top" style={{ height: 500 }}>
+                    <div ref="top" style={{ height: 600 }}>
                         {
                             React.cloneElement(
                                 <div />, null, this.props.children
@@ -55,7 +55,7 @@ export default class GoogleMap extends React.Component<GoogleMapProps, GoogleMap
         } else {
             return (
                 <div>
-                    <div ref="top" style={{ height: 500 }}>
+                    <div ref="top" style={{ height: 600 }}>
                     </div>
                 </div>
             );

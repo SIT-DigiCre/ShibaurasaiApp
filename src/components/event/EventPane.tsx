@@ -19,7 +19,6 @@ export default class EventPane extends React.Component<EventPaneProps, EventPane
         axios.get(this.props.ajax_url).then(
             (response) => {
                 this.setState({ json: response.data });
-                console.log(this);
             }
         );
     };

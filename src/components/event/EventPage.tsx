@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Tabs, Tab } from "material-ui/Tabs";
-import SwipeableViews from 'react-swipeable-views';
+import SwipeableViews from "react-swipeable-views";
 import EventPane from "./EventPane";
 import getMuiTheme from "material-ui/styles/getMuiTheme";
 import lightBaseTheme from "material-ui/styles/baseThemes/lightBaseTheme";
@@ -48,8 +48,8 @@ export default class EventPage extends React.Component<{}, EventPageState>{
                         index={this.state.slideIndex}
                         onChangeIndex={this.handleChange.bind(this)}
                         >
-                        <EventPane ajax_url={"/src/data/events_room.json"} />
-                        <EventPane ajax_url={"/src/data/events_stall.json"} />
+                        <EventPane ajax_url={"src/data/events_room.json"} />
+                        <EventPane ajax_url={"src/data/events_stall.json"} />
                     </SwipeableViews>
                 </div>
             </MuiThemeProvider>

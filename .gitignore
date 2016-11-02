@@ -52,3 +52,5 @@ plugins/
 ### ビルド時生成ファイルはコミットしない方針で
 
 www/js/
+www/src/data/*
+!www/src/data/.gitkeep

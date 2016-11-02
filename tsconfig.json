@@ -6,9 +6,15 @@
     "sourceMap": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "removeComments": false,
+    "removeComments": true,
     "noImplicitAny": false,
-    "jsx": "react"
+    "jsx": "react",
+    "lib": [
+      "es2015",
+      "dom",
+      "es5",
+      "scripthost"
+    ]
   },
   "exclude": [
     "node_modules",

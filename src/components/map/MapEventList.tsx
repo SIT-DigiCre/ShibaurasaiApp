@@ -24,7 +24,7 @@ export default class MapEventList extends React.Component<MapEventListProps, Map
         this.state = { events: [], searched: false } as MapEventListState;
     }
     private null_message = "見つかりませんでした．";
-    private ajax_base_url = "/src/data/events_";
+    private ajax_base_url = "src/data/events_";
     private style = {
         paper: {
             margin: 5,
