@@ -3,6 +3,7 @@ import SwipeableViews from "react-swipeable-views";
 import { Tabs, Tab } from "material-ui/Tabs";
 import { StageInfo } from "./StageGridTile";
 import { StageGridList } from "./StageGridList";
+import * as PureRenderMixin from "react-addons-pure-render-mixin";
 import * as axios from "axios";
 
 interface StageGridPaneProps {
@@ -44,6 +45,9 @@ export default class StageGridPane extends React.Component<StageGridPaneProps, S
                 this.setState({ stages: stages });
             }
         );
+    }
+    shouldComponentUpdate(nextProps, nextState) {
+        return PureRenderMixin.shouldComponentUpdate.bind(this)(nextProps, nextState, {});
     }
     render() {
         let tabs = this.tab_titles.map((tab_title, index) => {

@@ -13,6 +13,10 @@ import MapEventList from "./components/map/MapEventList";
 import AboutPage from "./components/about/AboutPage";
 import { Router, Route, hashHistory, IndexRoute } from "react-router";
 import spacing from "material-ui/styles/spacing";
+import * as Perf from "react-addons-perf";
+
+window["Perf"] = Perf;
+
 injectTapEventPlugin();
 polyfill();
 

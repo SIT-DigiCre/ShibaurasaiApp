@@ -5,6 +5,7 @@ import GenreBadge from "../common/GenreBadge";
 import { List, ListItem } from "material-ui/List";
 import MailIcon from "material-ui/svg-icons/content/mail";
 import LinkIcon from "material-ui/svg-icons/content/link";
+import * as PureRenderMixin from "react-addons-pure-render-mixin";
 
 export interface EventInfo {
     title: string;
@@ -42,7 +43,7 @@ export class EventCard extends React.Component<EventInfo, {}> {
                 paddingBottom: "16px"
             },
             text: {
-                backgroundColor:"#",
+                backgroundColor: "#",
                 padding: "6px",
                 description: {
                     paddingLeft: "1.5em",
@@ -58,7 +59,7 @@ export class EventCard extends React.Component<EventInfo, {}> {
         super();
     }
     shouldComponentUpdate(nextProps, nextState) {
-        return nextProps !== this.props;
+        return PureRenderMixin.shouldComponentUpdate.bind(this)(nextProps, nextState, {});
     }
     generateList() {
         let element;
