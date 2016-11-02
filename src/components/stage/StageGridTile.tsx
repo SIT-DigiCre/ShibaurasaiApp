@@ -35,7 +35,7 @@ export class StageGridTile extends React.Component<StageInfo, {}> {
             },
             paper: {
                 mobile: {
-                    height: 240,
+                    height: 280,
                     padding: 3,
                 },
                 pc: {
