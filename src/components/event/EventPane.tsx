@@ -1,6 +1,7 @@
 import * as React from "react";
 import { EventCard, EventInfo } from "./EventCard";
 import LoadingPage from "../common/LoadingPage";
+import * as PureRenderMixin from "react-addons-pure-render-mixin";
 import * as axios from "axios";
 
 interface EventPaneProps {
@@ -23,7 +24,9 @@ export default class EventPane extends React.Component<EventPaneProps, EventPane
             }
         );
     };
-
+    shouldComponentUpdate(nextProps, nextState) {
+        return PureRenderMixin.shouldComponentUpdate.bind(this)(nextProps, nextState, {});
+    }
     render() {
         let cards;
         if (this.state.json) {

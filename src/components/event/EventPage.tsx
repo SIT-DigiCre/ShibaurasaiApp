@@ -31,7 +31,6 @@ export default class EventPage extends React.Component<{}, EventPageState>{
             padding: 10,
         },
     };
-
     render() {
         return (
             <MuiThemeProvider muiTheme={getMuiTheme(lightBaseTheme)}>

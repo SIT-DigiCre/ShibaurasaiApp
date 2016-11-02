@@ -5,6 +5,7 @@ import getMuiTheme from "material-ui/styles/getMuiTheme";
 import lightBaseTheme from "material-ui/styles/baseThemes/lightBaseTheme";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import LoadingPage from "../common/LoadingPage";
+import * as PureRenderMixin from "react-addons-pure-render-mixin";
 import * as axios from "axios";
 
 interface EventListProps {
@@ -70,7 +71,9 @@ export default class EventList extends React.Component<EventListProps, EventList
             }
         );
     };
-
+    shouldComponentUpdate(nextProps, nextState) {
+        return PureRenderMixin.shouldComponentUpdate.bind(this)(nextProps, nextState, {});
+    }
     render() {
         let cards;
         if (this.state.events.length > 0) {

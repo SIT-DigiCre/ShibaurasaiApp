@@ -5,6 +5,7 @@ import StageGridPane from "./StageGridPane";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import getMuiTheme from "material-ui/styles/getMuiTheme";
 import lightBaseTheme from "material-ui/styles/baseThemes/lightBaseTheme";
+import * as PureRenderMixin from "react-addons-pure-render-mixin";
 
 interface StagePageState {
     slideIndex: number;
@@ -32,7 +33,9 @@ export default class StagePage extends React.Component<{}, StagePageState>{
             overflowY: "hidden",
         },
     };
-
+    shouldComponentUpdate(nextProps, nextState) {
+        return PureRenderMixin.shouldComponentUpdate.bind(this)(nextProps, nextState, {});
+    }
     render() {
         return (
             <MuiThemeProvider muiTheme={getMuiTheme(lightBaseTheme)}>

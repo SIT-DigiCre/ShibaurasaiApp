@@ -8,6 +8,7 @@ import Paper from "material-ui/Paper";
 import GenreBadge from "../common/GenreBadge";
 import LinkIcon from "material-ui/svg-icons/content/link";
 import * as MediaQuery from "react-responsive";
+import * as PureRenderMixin from "react-addons-pure-render-mixin";
 import { lightBlueA400, lightBlueA200, orangeA400, amberA200, white } from "material-ui/styles/colors";
 
 export interface StageInfo {
@@ -62,7 +63,7 @@ export class StageGridTile extends React.Component<StageInfo, {}> {
         }
     };
     shouldComponentUpdate(nextProps, nextState) {
-        return nextProps !== this.props;
+        return PureRenderMixin.shouldComponentUpdate.bind(this)(nextProps, nextState, {});
     }
     render() {
         return (
