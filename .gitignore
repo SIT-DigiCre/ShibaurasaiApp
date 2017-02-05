@@ -54,3 +54,5 @@ plugins/
 www/js/
 www/src/data/*
 !www/src/data/.gitkeep
+
+.vscode/
