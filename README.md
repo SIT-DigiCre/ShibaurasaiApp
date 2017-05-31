@@ -25,4 +25,11 @@ And Access to http://localhost:8080/www/ on your browser. I tested only Chrome.
 
 ### Run as Android App
 
-WIP
+You have to set up [Android Development Environment](http://cordova.apache.org/docs/en/7.x/guide/platforms/android/index.html).
+
+```sh
+$ npm instal -g cordova
+$ cd path/to/this/repository
+$ cordova platform add android
+$ cordova run android
+```
